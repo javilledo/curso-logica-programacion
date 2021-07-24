@@ -6,16 +6,16 @@ Dada una palabra y una frase, buscarla en la palabra en la frase y devolver cuan
 function buscarPalabraEnFrase(palabra, frase){
     
     //Limpiar de signos de puntuación
-    frase = frase.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()”“"…]/g,"")
+    frase = frase.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()”“"…]/gi,"")
 
     //Pasar todo a minúsculas
     frase = frase.toLowerCase();
 
     //Split de las palabras
-    var array = frase.split(' ');
+    let array = frase.split(' ');
 
     //Transformo el array en un diccionario
-    var dictionary = {};
+    let dictionary = {};
     for (var i in array){
         if (dictionary[array[i]] == null){
             dictionary[array[i]] = 1;
