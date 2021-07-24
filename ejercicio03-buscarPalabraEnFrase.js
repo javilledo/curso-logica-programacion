@@ -24,8 +24,14 @@ function buscarPalabraEnFrase(palabra, frase){
         }
     }
 
-    return dictionary[palabra];
+    if (dictionary[palabra] != null){
+        return dictionary[palabra];
+    } else {
+        return "No se encuentra la palabra en la frase";
+    };
 }
 
-console.log(buscarPalabraEnFrase("test", "test Test testificando tess.,."));
+console.log(buscarPalabraEnFrase("prueba", "test Test testificando tess.,."));
+
+//También puede usarse la función includes(palabra) directamente sobre la frase, pero te devuelve true o false, no el número de veces
 
