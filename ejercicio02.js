@@ -8,7 +8,7 @@ Por ejemplo: ana, bob, otto, allivessevilla
 function esPalindromo(texto){
 
     var longitud = texto.length;
-    
+
     var textoAlRevés = "";
 
     for (var i = longitud - 1; i >= 0; i--){
@@ -22,3 +22,13 @@ function esPalindromo(texto){
 }
 
 console.log(esPalindromo("ana"));
+
+//Convirtiéndolo en un array se puede usar un split, un reverse y después volver a unirlo para hacer la comprobación.
+
+function esPalindromo2(texto){
+
+    return texto == texto.split('').reverse().join('');
+
+}
+
+console.log(esPalindromo2("ana"));
