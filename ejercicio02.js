@@ -11,7 +11,7 @@ function esPalindromo(texto){
 
     var textoAlRevés = "";
 
-    for (var i = longitud - 1; i >= 0; i--){
+    for (let i = longitud - 1; i >= 0; i--){
 
         textoAlRevés += texto[i];
 
